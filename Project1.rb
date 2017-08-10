@@ -46,3 +46,33 @@ array << gets.chomp
 money = Expense.new(array)
 
 puts money.spending
+
+def date
+puts "when would you like to purchase your item?"
+  puts "A: 1 week"
+  puts "B: 1 month"
+  puts "C: other week"
+  puts "D: other month"
+  command = gets.chomp.upcase
+  case command
+  when "A"
+    puts "cool"
+  when "B"
+    puts "awesome "
+  when "C"
+  yield(1)
+  when "D"
+  yield(2)
+  else
+    puts "error"
+  end
+end
+date do |time|
+  case time
+  when 1
+  puts "How many weeks?"
+  howMany = gets.chomp.to_i
+  when 2
+  puts "How many weeks?"
+  howMany = gets.chomp.to_i
+  end
